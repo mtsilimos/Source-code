@@ -1,0 +1,24 @@
+import nltk
+nltk.download('gutenberg') # download the Gutenberg corpus
+
+
+
+from nltk.corpus import gutenberg
+files = gutenberg.fileids()  # check all the files of the Gutenberg corpus
+files
+
+
+# Get the path to the Gutenberg corpus data directory
+gutenberg_path = nltk.data.find('corpora/gutenberg')
+
+# Construct the full path to austen-emma.txt
+file_path = os.path.join(gutenberg_path, 'austen-emma.txt')
+
+# Open and read the file
+with open(file_path, encoding='utf-8') as f: # Add encoding='utf-8' to handle potential encoding issues
+    data = f.read()
+    print(data)
+
+
+
+pip install matplotlib # install matplotlib

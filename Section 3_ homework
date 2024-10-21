@@ -1,0 +1,26 @@
+# Apply text preprocessing techniques in the following texts.
+
+
+Text 1
+a) Remove special characters
+b) Remove digits
+c) Remove whitespaces
+
+text1 = '''The @Kingdomhearts series is coming to Switch. %Crown 10 lots of adventures will make their way onto
+Switch as cloud games, and will be <available> in standalone collections or as a complete set.'''
+
+
+Text 2
+a) Remove special characters
+b) Remove whitespaces
+
+text2 = '''Thanks to @twitteruk for including me in the meme of the season! Amazing that my original Dry Your
+Eyes kicked it off. Glad I put some smiles on some faces '''
+
+
+Text 3
+a) Remove hyperlink
+b) Remove special characters
+c) Remove whitespaces
+
+text3 = 'Marvel heroes suit up to celebrate 80 years of Captain America! https://bit.ly/3xagEBo #CaptainAmerica80 '

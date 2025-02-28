@@ -1,0 +1,9 @@
+Section 1
+import nltk
+nltk.download('punkt')
+
+Section 2
+pip install matplotlib
+
+Section 3
+!pip install autocorrect

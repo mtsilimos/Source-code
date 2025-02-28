@@ -1,5 +1,6 @@
 import nltk
 nltk.download('gutenberg') # download the Gutenberg corpus
+import os
 
 
 
@@ -21,4 +22,4 @@ with open(file_path, encoding='utf-8') as f: # Add encoding='utf-8' to handle po
 
 
 
-pip install matplotlib # install matplotlib
+

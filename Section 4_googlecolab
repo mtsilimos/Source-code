@@ -1,0 +1,153 @@
+# Lower case
+
+text = "She reads many books at HOME and I think she is the quickest READER I know."
+text.lower() 
+
+# Stemming
+
+from nltk.stem.porter import PorterStemmer
+stemmer = PorterStemmer() 
+stemmer.stem('active') 
+
+stemmer = PorterStemmer()
+stemmer.stem('activity') 
+
+text = '''What Gabriela was experiencing was a cultural clash in expectations. She was used to a more hierarchical
+framework where the team leader and manager took control and gave specific instructions on how things were to be
+done. This more directive management style worked well for her and her team in Brazil but did not transfer well to her
+new team in Sweden, who were more used to a flatter hierarchy where decision making was more democratic. When
+Gabriela took the issue to her Swedish manager, rather than stepping in with directions about what to do, her manager
+took on the role of coach and focused on getting her to come up with her own solutions instead.'''
+
+from nltk.tokenize import word_tokenize
+
+import nltk
+nltk.download('punkt_tab')
+words = word_tokenize(text)
+stemmer = PorterStemmer()
+for word in words:
+ print ((word,stemmer.stem(word)))
+
+
+from nltk.stem import SnowballStemmer
+
+stemmer = SnowballStemmer('english') 
+stemmer.stem('language') 
+
+
+# Lemmatization
+
+from nltk.stem import WordNetLemmatizer
+lemma = WordNetLemmatizer()
+
+import nltk
+nltk.download('wordnet')
+lemma.lemmatize('runs')
+
+
+lemma = WordNetLemmatizer()
+lemma.lemmatize('better')
+
+
+lemma = WordNetLemmatizer()
+lemma.lemmatize('better', pos = 'a')
+
+text = '''What Gabriela was experiencing was a cultural clash in expectations. She was used to a more
+hierarchical framework where the team leader and manager took control and gave specific instructions on
+how things were to be done. This more directive management style worked well for her and her team in
+Brazil but did not transfer well to her new team in Sweden, who were more used to a flatter hierarchy
+where decision making was more democratic. When Gabriela took the issue to her Swedish manager,
+rather than stepping in with directions about what to do, her manager took on the role of coach and
+focused on getting her to come up with her own solutions instead.'''
+
+from nltk.tokenize import word_tokenize
+words = word_tokenize(text)
+lemma = WordNetLemmatizer()
+for word in words:
+ print ((word,lemma.lemmatize(word)))
+
+
+# Stop words
+
+text = "she reads many books at home and i think she is the quickest reader i know"
+
+import nltk
+nltk.download('stopwords')
+from nltk.corpus import stopwords
+print(stopwords.words('english'))
+
+
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+text = "she reads many books at home and i think she is the quickest reader i know"
+tokens = word_tokenize(text)
+
+stopwords.words('english') 
+remove_stopwords= [word for word in tokens if word not in stopwords.words()]
+remove_stopwords
+
+text = "but she reads many books at home and i think she is the quickest reader i know"
+tokens = word_tokenize(text)
+new_stopwords = stopwords.words("english") 
+new_stopwords.remove("but") 
+filtered_text = [but for but in tokens if not but in new_stopwords]
+print(" ".join(filtered_text)) 
+
+
+# Stem a list of words
+
+from nltk.stem import PorterStemmer
+stemmer = PorterStemmer()
+words = ['reads', 'many', 'books', 'home', 'think', 'quickest', 'reader', 'know']
+
+for word in words:
+  print(stemmer.stem(word))
+
+
+# Lemmatize words
+
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+
+
+print(lemmatizer.lemmatize("reads"))
+print(lemmatizer.lemmatize("many"))
+print(lemmatizer.lemmatize("books"))
+print(lemmatizer.lemmatize("home"))
+print(lemmatizer.lemmatize("think"))
+print(lemmatizer.lemmatize("quickest", pos="a"))
+print(lemmatizer.lemmatize("reader"))
+print(lemmatizer.lemmatize("know"))
+
+
+# Lemmatize in one go
+
+text = "she reads MANY BOOKS at home and i think she is the quickest reader i know"
+from nltk import word_tokenize
+from nltk.corpus import stopwords
+from nltk import WordNetLemmatizer
+def norm_text(text):
+ #tokenize the text into words
+ tokens = word_tokenize(text)
+ # convert the upper cases into lower cases
+ tokens = [word.lower() for word in tokens]
+ # remove the stopwords
+ tokens = [word for word in tokens if not word in stopwords.words("english")]
+ # lemmatize the words
+ lemma = WordNetLemmatizer()
+ tokens = [lemma.lemmatize(word) for word in tokens]
+ return tokens
+
+# Homeowrk
+
+Task 1
+Perform stemming (Porter stemmer) in the following text.
+People might not realise they are part of the disposable clothing problem because they donate their unwanted clothes to
+charities.
+Task 2
+Perform lemmatization in the following text.
+People might not realise they are part of the disposable clothing problem because they donate their unwanted clothes to
+charities.
+
+norm_text(text)

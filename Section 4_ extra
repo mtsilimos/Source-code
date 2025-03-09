@@ -1,4 +1,0 @@
-# Lemmatization
-
-import nltk
-nltk.download('wordnet')

@@ -139,12 +139,15 @@ def norm_text(text):
  tokens = [lemma.lemmatize(word) for word in tokens]
  return tokens
 
-# Homeowrk
+norm_text(text)
+
+# Homework
 
 Task 1
 Perform stemming (Porter stemmer) in the following text.
 People might not realise they are part of the disposable clothing problem because they donate their unwanted clothes to
 charities.
+
 Task 2
 Perform lemmatization in the following text.
 People might not realise they are part of the disposable clothing problem because they donate their unwanted clothes to

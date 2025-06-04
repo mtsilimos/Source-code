@@ -1,13 +1,28 @@
 Section 1
-pip install ntlk 
+
+pip install nltk
 
 OR
 
-import nltk
-nltk.download('punkt')
+nltk.download('all') 
+
+OR 
+
+nltk.download()
+
+OR
+
+nltk.download('punkt_tab')
+
+
 
 Section 2
+
+nltk.download('gutenberg')
+
 pip install matplotlib
+
+
 
 Section 3
 !pip install autocorrect

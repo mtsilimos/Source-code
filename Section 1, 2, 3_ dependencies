@@ -1,4 +1,8 @@
 Section 1
+pip install ntlk 
+
+OR
+
 import nltk
 nltk.download('punkt')
 

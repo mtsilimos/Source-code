@@ -1,1 +1,0 @@
-text = '''Speaking after talks with German Chancellor Olaf Scholz, Putin said that while the U.S. and NATO rejected Moscow’s demand to keep Ukraine and other ex-Soviet nations out of NATO, halt weapons deployments near Russian borders and roll back alliance forces from Eastern Europe, they have agreed to discuss some security measures already suggested by Russia.'''

@@ -91,7 +91,7 @@ text = "but she reads many books at home and i think she is the quickest reader 
 tokens = word_tokenize(text)
 new_stopwords = stopwords.words("english") 
 new_stopwords.remove("but") 
-filtered_text = [but for but in tokens if not but in new_stopwords]
+filtered_text = [word for word in tokens if not word in new_stopwords]
 print(" ".join(filtered_text)) 
 
 
